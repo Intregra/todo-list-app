@@ -1,6 +1,6 @@
 # todo-list-app
 Simple TODO angular aplication created with help from [fountain-JS](https://github.com/FountainJS/generator-fountain-webapp) generator.
-Main filed you would like to look at are
+Main files you would like to look at are
 ```
 src/index.html
 src/index.css
@@ -21,7 +21,7 @@ Start up the server with
 ```
 npm run serve
 ```
-then open your web browser and go to `localhost:9000`
+Then open your web browser and go to `localhost:9000`
 
 ## Test the app
 Package includes one test which tests the language option in the app.
