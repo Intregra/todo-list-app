@@ -1,0 +1,27 @@
+<div id="mainPodium">
+	<div id="langSel" ng-click="$ctrl.toggleLanguages()">
+		<span class="lang CZ">CZ</span>
+		<span>/</span>
+		<span class="lang EN selected">EN</span>
+	</div>
+	<h1>{{ $ctrl.title }}</h1>
+	<table class="table">
+		<tr ng-repeat="note in $ctrl.resData" id="note_{{ note.id }}">
+			<td class="note_title">{{ note.title }}</td>
+			<td class="note_options">
+				<span ng-click="$ctrl.editNote(note.id)" class="glyphicon glyphicon-pencil"></span>
+				<span ng-click="$ctrl.removeNote(note.id)" class="glyphicon glyphicon-trash"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><input class="form-control" ng-model="$ctrl.noteField" type="text"></td>
+			<td><button class="btn btn-default" ng-click="$ctrl.sendFormNote()">{{ $ctrl.sendButton }}</button></td>
+		</tr>
+	</table>
+
+	<div id="stateLine">
+		<p><span ng-click="$ctrl.toggleMessages()" class="glyphicon glyphicon-triangle-bottom"></span></p>
+		<p ng-show="$ctrl.showStatusMessages" class="lineName">{{ $ctrl.lineName }}</p>
+		<p ng-show="$ctrl.showStatusMessages">{{ $ctrl.stateLine }}</p>
+	</div>
+</div>
